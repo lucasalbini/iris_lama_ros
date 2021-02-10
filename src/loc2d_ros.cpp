@@ -48,9 +48,9 @@ lama::Loc2DROS::Loc2DROS()
 
     pnh_.param("scan_topic", scan_topic_, std::string("/scan"));
 
-    pnh_.param("transform_tolerance", tmp, 0.1); transform_tolerance_.fromSec(tmp);
+    pnh_.param("transform_tolerance", tmp, 1.0); transform_tolerance_.fromSec(tmp);
 
-    pnh_.param("use_map_topic", use_map_topic_, false);
+    pnh_.param("use_map_topic", use_map_topic_, true);
     pnh_.param("first_map_only", first_map_only_, false);
     pnh_.param("use_pose_on_new_map", use_pose_on_new_map_, false);
 
